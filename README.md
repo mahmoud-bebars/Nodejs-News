@@ -10,5 +10,5 @@
 
 use nodemon for initing the server
 
-<p>Test the project by cloning it and installing the node_modules with command <strong>npm install</strong></p>
-<p>init the project by the command <strong>npm start</starong>
+<p>Test the project by cloning it and installing the node_modules with command <strong style="color:MediumSeaGreen;">npm install</strong></p>
+<p>init the project by the command <strong style="color:MediumSeaGreen;">npm start</starong>
