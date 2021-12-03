@@ -1,9 +1,9 @@
 const express = require("express");
-const dotenv = require("dotenv")
+require('dotenv').config()
 const axios = require("axios").default;
 const Router = express.Router();
 
-APIKEY = dotenv.process.env.NEWS_API_KEY;
+APIKEY = process.env.NEWS_API_KEY;
 
 Router.get("", async (req, res) => {
   try {
