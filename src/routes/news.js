@@ -1,14 +1,14 @@
 const express = require("express");
-require("dotenv").config();
+const env = require("dotenv")
 const axios = require("axios").default;
 const Router = express.Router();
 
-APIKEY = process.env.NEWS_API_KEY;
+APIKEY = env.NEWS_API_KEY;
 
 Router.get("", async (req, res) => {
   try {
     const newsAPI = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=9c08be690efe4d41873c1d3bfae2ff47`
+      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${APIKEY}`
     );
     const data = newsAPI.data.articles;
     // console.log(data);
@@ -31,7 +31,7 @@ Router.post("/", async (req, res) => {
 
   try {
     const newsAPI = await axios.get(
-      `https://newsapi.org/v2/everything?from=2021-09-02&sortBy=popularity&apiKey=9c08be690efe4d41873c1d3bfae2ff47&q=${search}`
+      `https://newsapi.org/v2/everything?from=2021-09-02&sortBy=popularity&apiKey=${APIKEY}&q=${search}`
     );
     const data = newsAPI.data.articles;
     // console.log(search);
